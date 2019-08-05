@@ -1,0 +1,139 @@
+2019-08-05 22:20:00,254 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-08-05 22:20:07,127 [ERROR]  Task exception was never retrieved
+future: <Task finished coro=<configure_app.<locals>.run_cmdline_io() done, defined at /opt/conda/lib/python3.7/site-packages/rasa/core/run.py:115> exception=ClientConnectorError(99, 'Cannot assign requested address')>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "uvloop/loop.pyx", line 1904, in create_connection
+  File "uvloop/loop.pyx", line 1882, in uvloop.loop.Loop.create_connection
+  File "uvloop/handles/tcp.pyx", line 179, in uvloop.loop.TCPTransport.connect
+  File "uvloop/handles/tcp.pyx", line 201, in uvloop.loop._TCPConnectRequest.connect
+OSError: [Errno 99] Cannot assign requested address
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/rasa/core/run.py", line 119, in run_cmdline_io
+    server_url=constants.DEFAULT_SERVER_FORMAT.format(port)
+  File "/opt/conda/lib/python3.7/site-packages/rasa/core/channels/console.py", line 137, in record_messages
+    async for response in bot_responses:
+  File "/opt/conda/lib/python3.7/site-packages/async_generator/_impl.py", line 366, in step
+    return await ANextIter(self._it, start_fn, *args)
+  File "/opt/conda/lib/python3.7/site-packages/async_generator/_impl.py", line 205, in throw
+    return self._invoke(self._it.throw, type, value, traceback)
+  File "/opt/conda/lib/python3.7/site-packages/async_generator/_impl.py", line 209, in _invoke
+    result = fn(*args)
+  File "/opt/conda/lib/python3.7/site-packages/rasa/core/channels/console.py", line 100, in send_message_receive_stream
+    async with session.post(url, json=payload, raise_for_status=True) as resp:
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5005 ssl:None [Cannot assign requested address]
+2019-08-05 22:20:57,487 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-08-05 22:21:01,925 [ERROR]  Task exception was never retrieved
+future: <Task finished coro=<configure_app.<locals>.run_cmdline_io() done, defined at /opt/conda/lib/python3.7/site-packages/rasa/core/run.py:115> exception=ClientConnectorError(99, 'Cannot assign requested address')>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "uvloop/loop.pyx", line 1904, in create_connection
+  File "uvloop/loop.pyx", line 1882, in uvloop.loop.Loop.create_connection
+  File "uvloop/handles/tcp.pyx", line 179, in uvloop.loop.TCPTransport.connect
+  File "uvloop/handles/tcp.pyx", line 201, in uvloop.loop._TCPConnectRequest.connect
+OSError: [Errno 99] Cannot assign requested address
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/rasa/core/run.py", line 119, in run_cmdline_io
+    server_url=constants.DEFAULT_SERVER_FORMAT.format(port)
+  File "/opt/conda/lib/python3.7/site-packages/rasa/core/channels/console.py", line 137, in record_messages
+    async for response in bot_responses:
+  File "/opt/conda/lib/python3.7/site-packages/async_generator/_impl.py", line 366, in step
+    return await ANextIter(self._it, start_fn, *args)
+  File "/opt/conda/lib/python3.7/site-packages/async_generator/_impl.py", line 205, in throw
+    return self._invoke(self._it.throw, type, value, traceback)
+  File "/opt/conda/lib/python3.7/site-packages/async_generator/_impl.py", line 209, in _invoke
+    result = fn(*args)
+  File "/opt/conda/lib/python3.7/site-packages/rasa/core/channels/console.py", line 100, in send_message_receive_stream
+    async with session.post(url, json=payload, raise_for_status=True) as resp:
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5005 ssl:None [Cannot assign requested address]
+2019-08-05 22:21:53,015 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-08-05 22:21:57,233 [ERROR]  Task exception was never retrieved
+future: <Task finished coro=<configure_app.<locals>.run_cmdline_io() done, defined at /opt/conda/lib/python3.7/site-packages/rasa/core/run.py:115> exception=ClientConnectorError(99, 'Cannot assign requested address')>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "uvloop/loop.pyx", line 1904, in create_connection
+  File "uvloop/loop.pyx", line 1882, in uvloop.loop.Loop.create_connection
+  File "uvloop/handles/tcp.pyx", line 179, in uvloop.loop.TCPTransport.connect
+  File "uvloop/handles/tcp.pyx", line 201, in uvloop.loop._TCPConnectRequest.connect
+OSError: [Errno 99] Cannot assign requested address
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/rasa/core/run.py", line 119, in run_cmdline_io
+    server_url=constants.DEFAULT_SERVER_FORMAT.format(port)
+  File "/opt/conda/lib/python3.7/site-packages/rasa/core/channels/console.py", line 137, in record_messages
+    async for response in bot_responses:
+  File "/opt/conda/lib/python3.7/site-packages/async_generator/_impl.py", line 366, in step
+    return await ANextIter(self._it, start_fn, *args)
+  File "/opt/conda/lib/python3.7/site-packages/async_generator/_impl.py", line 205, in throw
+    return self._invoke(self._it.throw, type, value, traceback)
+  File "/opt/conda/lib/python3.7/site-packages/async_generator/_impl.py", line 209, in _invoke
+    result = fn(*args)
+  File "/opt/conda/lib/python3.7/site-packages/rasa/core/channels/console.py", line 100, in send_message_receive_stream
+    async with session.post(url, json=payload, raise_for_status=True) as resp:
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/opt/conda/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5005 ssl:None [Cannot assign requested address]
+2019-08-05 22:22:39,412 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-08-05 22:23:27,356 [ERROR]  Task exception was never retrieved
+future: <Task finished coro=<configure_app.<locals>.run_cmdline_io() done, defined at /opt/conda/lib/python3.7/site-packages/rasa/core/run.py:115> exception=AttributeError("'NoneType' object has no attribute 'find'")>
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/rasa/core/run.py", line 119, in run_cmdline_io
+    server_url=constants.DEFAULT_SERVER_FORMAT.format(port)
+  File "/opt/conda/lib/python3.7/site-packages/rasa/core/channels/console.py", line 128, in record_messages
+    text = get_cmd_input(button_question)
+  File "/opt/conda/lib/python3.7/site-packages/rasa/core/channels/console.py", line 70, in get_cmd_input
+    response = rasa.cli.utils.payload_from_button_question(button_question)
+  File "/opt/conda/lib/python3.7/site-packages/rasa/cli/utils.py", line 170, in payload_from_button_question
+    payload = response[response.find("(") + 1 : response.find(")")]
+AttributeError: 'NoneType' object has no attribute 'find'

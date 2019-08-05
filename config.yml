@@ -1,0 +1,24 @@
+
+language: "en"
+
+pipeline:
+- name: "spellcheck.SpellCheck"
+- name: "WhitespaceTokenizer"
+- name: "CRFEntityExtractor"
+- name: "CountVectorsFeaturizer"
+- name: "EmbeddingIntentClassifier"
+  random_seed: 123
+  epochs: 300
+  intent_tokenization_flag: true
+  intent_split_symbol: "+"
+- name: "EntitySynonymMapper"
+
+policies:
+- name: MemoizationPolicy
+- name: KerasPolicy
+  random_seed: 123
+  epochs: 300
+- name: MappingPolicy
+- name: TwoStageFallbackPolicy
+  nlu_threshold: 0.8
+  fallback_nlu_action_name: "action_start_over"

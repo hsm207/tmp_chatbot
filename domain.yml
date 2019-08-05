@@ -1,0 +1,72 @@
+
+
+intents:
+- greet
+- goodbye
+- recommend_session
+- speaker
+- length
+- abstract
+- thanks
+- inform
+- speaker+length
+- out_of_scope # mod 1
+
+
+slots:
+  relevant_audience:
+    type: text
+  length:
+    type: unfeaturized
+  speaker:
+    type: unfeaturized
+  abstract:
+    type: unfeaturized
+
+
+entities:
+- relevant_audience
+
+
+actions:
+- utter_greet
+- utter_thanks
+- utter_goodbye
+- utter_length
+- utter_abstract
+- utter_speaker
+- utter_ask_relevant_audience
+- utter_ask_other_questions
+- action_recommend_session
+- action_start_over # mod 2
+
+
+templates:
+  utter_greet:
+    - text: "Hey! I am a conference assistant. I can help you find the sessions to attend, or answer conference-related questions."
+
+  utter_thanks:
+    - text: "You are very welcome!"
+
+  utter_goodbye:
+    - text: "See you later"
+    - text: "Bye bye"
+  
+  utter_ask_other_questions:
+    - text: "Would you like to know anything else?"
+    
+  utter_ask_relevant_audience:
+    - text: "What would be the relevant audience?"
+  
+  utter_speaker:
+    - text: "The speaker is {speaker}."
+  
+  utter_length:
+    - text: "The session is {length}"
+    
+  utter_abstract:
+    - text: "{abstract}"
+
+  utter_ask_rephrase: # mod 3
+    - text: "Can you please rephrase that?"
+
